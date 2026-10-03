@@ -45,7 +45,6 @@ void EpubReaderMenuActivity::buildMenuItems(std::vector<MenuItem>& items, const 
                                             const bool hasSyncConfigured) {
   items.clear();
   items.reserve(MAX_MENU_ITEMS);
-  items.push_back({MenuAction::SELECT_CHAPTER, StrId::STR_SELECT_CHAPTER});
   if (hasFootnotes) {
     items.push_back({MenuAction::FOOTNOTES, StrId::STR_FOOTNOTES});
   }
@@ -60,6 +59,7 @@ void EpubReaderMenuActivity::buildMenuItems(std::vector<MenuItem>& items, const 
   if (hasClippings) {
     items.push_back({MenuAction::VIEW_CLIPPINGS, StrId::STR_VIEW_CLIPPINGS});
   }
+  items.push_back({MenuAction::SELECT_CHAPTER, StrId::STR_SELECT_CHAPTER});
   items.push_back({MenuAction::NIGHT_MODE, StrId::STR_NIGHT_MODE});
   if (Frontlight.present() && !slideSwitchOwnsLight()) {
     items.push_back({MenuAction::FRONTLIGHT, StrId::STR_FRONTLIGHT});
