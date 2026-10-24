@@ -41,7 +41,8 @@ void EpubReaderMenuActivity::buildMenuRowItems() {
 }
 
 void EpubReaderMenuActivity::buildMenuItems(std::vector<MenuItem>& items, const bool hasFootnotes,
-                                            const bool hasBookmarks, const bool hasClippings, const bool hasSyncConfigured) {
+                                            const bool hasBookmarks, const bool hasClippings,
+                                            const bool hasSyncConfigured) {
   items.clear();
   items.reserve(MAX_MENU_ITEMS);
   items.push_back({MenuAction::SELECT_CHAPTER, StrId::STR_SELECT_CHAPTER});
@@ -68,7 +69,7 @@ void EpubReaderMenuActivity::buildMenuItems(std::vector<MenuItem>& items, const 
     items.push_back({MenuAction::BLUETOOTH, StrId::STR_BT_PAGE_TURNER});
   }
   if (hasSyncConfigured) {
-      items.push_back({MenuAction::SYNC, StrId::STR_SYNC_PROGRESS});
+    items.push_back({MenuAction::SYNC, StrId::STR_SYNC_PROGRESS});
   }
   items.push_back({MenuAction::ROTATE_SCREEN, StrId::STR_ORIENTATION});
   items.push_back({MenuAction::AUTO_PAGE_TURN, StrId::STR_AUTO_TURN_PAGES_PER_MIN});

@@ -39,7 +39,8 @@ class EpubReaderMenuActivity final : public UiListActivity {
   };
 
   static void toggleBluetooth();
-  static void buildMenuItems(std::vector<MenuItem>& items, bool hasFootnotes, bool hasBookmarks, bool hasClippings, bool hasSyncConfigured);
+  static void buildMenuItems(std::vector<MenuItem>& items, bool hasFootnotes, bool hasBookmarks, bool hasClippings,
+                             bool hasSyncConfigured);
 
   explicit EpubReaderMenuActivity(GfxRenderer& renderer, MappedInputManager& mappedInput, const std::string& title,
                                   const int currentPage, const int totalPages, const int bookProgressPercent,
